@@ -177,7 +177,7 @@ const OrganizerDashboard: React.FC<OrganizerDashboardProps> = ({ user, onLogout 
     const sessionStatusKey = `session${exportSession}` as keyof AttendanceRecord;
     const markedByKey = `session${exportSession}_markedBy` as keyof AttendanceRecord;
 		// Export all members (present and absent) for the selected session
-		const headers = ['Registration_No', 'Name', 'Email', 'Team', `session${exportSession}_Status`, 'Marked_By', 'Last_Updated'];
+		const headers = ['Registration_No', 'Name','Team', `session${exportSession}_Status`, 'Marked_By', 'Last_Updated'];
 		const sessionRows = attendanceRecords.map(record => {
 			const status = record[sessionStatusKey] === true ? 'Present' : 'Absent';
 			return [
@@ -348,5 +348,6 @@ const OrganizerDashboard: React.FC<OrganizerDashboardProps> = ({ user, onLogout 
     </div>
   );
 };
+
 
 export default OrganizerDashboard;
