@@ -2,15 +2,16 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import basicSsl from '@vitejs/plugin-basic-ssl';
 
-// https://vitejs.dev/config/
+// https://vitejs/dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    basicSsl()
+    basicSsl() // Note: This only affects your local dev server
   ],
-  base: '/HACKARE_3.0_ATT/',
+  // 👇 THE FIX IS HERE
+  base: '/', 
   server: {
-    host: true, // Allows access from your mobile device
-    https: {}  // Enables HTTPS
+    host: true, // Note: This only affects your local dev server
+    https: {}     // Note: This only affects your local dev server
   }
 });
