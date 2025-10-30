@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     basicSsl()
   ],
-  base: '/HACKARE-3.0/',
+  base: '/HACKARE_3.0_ATT/',
   server: {
     host: true, // Allows access from your mobile device
     https: {}  // Enables HTTPS
